@@ -1,0 +1,69 @@
+/* mobile first*/
+html{
+    font-size: 62.25%;
+}
+body{
+    font-family: "gotham", Arial, Helvetica, sans-serif;
+    background-color: darkcyan;
+    padding: 1rem
+}
+/*vanhemman säänöt:*/
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.wrapper > *{
+    padding: 1rem;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+.header{
+background-color: gold;
+}
+
+.wrapper
+.main{
+background-color: darkorange;
+}
+
+.aside-1{
+background-color: mediumseagreen;
+}
+.aside-2{
+background-color: seagreen;
+}
+.footer{
+    background-color: lightgreen;
+}
+
+/* tablet-näkymän säännöt*/
+@media only screen and (min-width: 426px) {
+    body {
+      background-color: lightblue;
+    }
+    .wrapper .aside-1, .wrapper .aside-2{
+        flex-basis: 0
+        ;
+    }
+  }
+/* desketop-näkymän säännöt*/
+@media only screen and (min-width: 426px) {
+    body {
+      background-color: lightcoral;
+    }
+    .wrapper .aside-1{
+        order: 1;
+    }
+    .wrapper .main{
+        flex-basis: 0;
+        order: 2;
+        flex-grow: 3;
+    }
+    .wrapper .aside-2{
+        order: 3;
+    }
+    .wrapper .footer{
+        order: 4;
+    }
+  }
